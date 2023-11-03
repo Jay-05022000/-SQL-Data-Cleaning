@@ -166,9 +166,12 @@ SELECT *,
 
  --------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- Get rid off unused cloumns (propertyaddress,owneraddress,taxdistrict)
+-- Get rid off unused cloumns (owneraddress,taxdistrict)
 
 ALTER TABLE [ Nashville Housing Data for Data Cleaning]
-DROP COLUMN propertyaddress,owneraddress,taxdistrict
+DROP COLUMN owneraddress,taxdistrict
 
+/* In my main script file I have dropped the 'propertyaddress' column while performing 'Get rid off unused columns' task because I had already formated this column
+correctly in above steps but realised that deleting it is not a good option because it will create an error when I will run this script in future due to unavailability
+of 'propertyaddress' column.Hence I am editing last task here so that other people don't have a problem of re-runability. */
  
